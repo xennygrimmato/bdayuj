@@ -13,7 +13,6 @@ Werkzeug==0.12.2
 argparse==1.2.1
 attrs==17.2.0
 beautifulsoup4==4.6.0
-chardet==2.0.1
 click==6.7
 colorama==0.2.5
 command-not-found==0.3
