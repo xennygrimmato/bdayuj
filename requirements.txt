@@ -10,7 +10,6 @@ Scrapy==1.4.0
 Twisted==16.4.1
 Unirest==1.1.7
 Werkzeug==0.12.2
-apt-xapian-index==0.45
 argparse==1.2.1
 attrs==17.2.0
 beautifulsoup4==4.6.0
