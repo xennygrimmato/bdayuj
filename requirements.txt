@@ -15,7 +15,6 @@ attrs==17.2.0
 beautifulsoup4==4.6.0
 click==6.7
 colorama==0.2.5
-command-not-found==0.3
 constantly==15.1.0
 cssselect==1.0.1
 debtagshw==0.1
