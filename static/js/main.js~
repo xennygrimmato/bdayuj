@@ -1,0 +1,8 @@
+angular.module("myapp", [])
+   
+   .controller("YujController", function($scope) {
+      $scope.helloTo = {};
+      $scope.helloTo.title = "AngularJS";
+   });
+
+

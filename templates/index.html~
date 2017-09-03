@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Whatsapp Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="static/js/jquery-3.2.1.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+</head>
+
+<body >
+
+  <p>My first expression: {{ 5 + 5 }}</p>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+
+
+</div ng-app="myApp">
+
+
+ <div ng-controller='personCtrl' >
+        <div class="row " class="container app">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 conversation app-one">
+                <!-- Heading -->
+                <div class="row heading">
+
+                  <div class="col-sm-1"><a href="details"><span class="margin-top-9 glyphicon glyphicon-arrow-left"></span></a></div>
+                    <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+                        <div class="heading-avatar-icon">
+                            <img src="static/img/Vayuj.jpg"/>
+				
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-xs-7 heading-name margin-adjust">
+                        <span class="heading-name-meta">Vayuj Rajan 
+                          <br/><span class="font-weight-normal" id="status">Online</span></span>
+                    </div>
+                    <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+                        <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- Heading End -->
+                <!-- Message Box -->
+                <div class="row message" id="conversation">
+                    <div class="row message-previous">
+                        <div class="col-sm-12 previous">
+                            <a onclick="previous(this)" id="jain" name="20"> Show Previous Message!</a>
+                        </div>
+                    </div>
+                    <div class="row message-body">
+                        <div class="col-sm-12 message-main-receiver">
+                            <div class="receiver">
+                                <div class="message-text" id="question">
+                                    Vayuj?
+                                </div>
+                                <span class="message-time pull-right">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row message-body">
+                        <div class="col-sm-12 message-main-sender">
+                            <div class="sender">
+                                <div class="message-text" id="reply">
+                                    Bol
+                                </div>
+                                <span class="message-time pull-right">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+		
+              
+
+                <div class="row reply">
+		   <form method="post" action="http://localhost:5000/hello/">
+                    <div class="col-sm-1 col-xs-1 reply-emojis">
+                        <i class="fa fa-smile-o fa-2x"></i>
+                    </div>
+                    <div class="col-sm-9 col-xs-9 reply-main">
+                        <input type="text" name="yourname" class="form-control" rows="1" id="searchString"/>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 reply-recording">
+                        <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 reply-send" >
+                        <i class="fa fa-send fa-2x" aria-hidden="true" type="submit" value="Submit" id="search"></i>
+                    </div>
+		</form>
+                </div>
+                <!-- Reply Box End -->
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <!-- App One End -->
+
+    <!-- App End -->
+</div>
+
+ <script type=text/javascript>
+  $('#search').click(function() {
+        a=$("#searchString").val();
+	$('#question')[0].innerText=a+"?"
+        document.getElementsByClassName("font-weight-normal")[0].innerText="typing..."
+	var obj ="{\"yourname\" : \""+a+"\"}"
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "http://localhost:5000/test",
+	  "method": "POST",
+	  "headers": {
+	    "content-type": "application/json",
+	    "cache-control": "no-cache"
+	  },
+	  "processData": false,
+	  "data": obj
+	}
+
+	$.ajax(settings).done(function (response) {
+	  console.log(response);
+          $('#reply')[0].innerText=response
+          document.getElementsByClassName("font-weight-normal")[0].innerText="Online"
+	});
+       
+    });
+var myApp = angular.module('myApp', [
+ 'ngRoute',
+]);
+
+
+myApp.controller('personCtrl', function($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe",
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    }
+});
+
+</script>
+ 
+
+</body>
+
+</html>
+
+
+

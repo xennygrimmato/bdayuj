@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <title>Whatsapp Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery-3.2.1.js"></script>
+    <script src="static/js/main.js"></script>
+</head>
+
+<body>
+    <div class="container app">
+        <div class="row ">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 conversation app-one">
+                <!-- Heading -->
+                <div class="row heading">
+
+                  <div class="col-sm-1"><a href="details"><span class="margin-top-9 glyphicon glyphicon-arrow-left"></span></a></div>
+                    <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+                        <div class="heading-avatar-icon">
+                            <img src="static/Vayuj.jpg">
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-xs-7 heading-name margin-adjust">
+                        <span class="heading-name-meta">Vayuj Rajan 
+                          <br/><span class="font-weight-normal" id="status">Online</span></span>
+                    </div>
+                    <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+                        <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- Heading End -->
+                <!-- Message Box -->
+               
+              
+
+                <div class="row reply">
+		   <form method="post" action="http://localhost:5000/hello/">
+                    <div class="col-sm-1 col-xs-1 reply-emojis">
+                        <i class="fa fa-smile-o fa-2x"></i>
+                    </div>
+                    <div class="col-sm-9 col-xs-9 reply-main">
+                        <input type="text" name="yourname" class="form-control" rows="1" id="searchString"/>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 reply-recording">
+                        <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-sm-1 col-xs-1 reply-send" >
+                        <i class="fa fa-send fa-2x" aria-hidden="true" type="submit" value="Submit" id="search"></i>
+                    </div>
+		</form>
+                </div>
+                <!-- Reply Box End -->
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <!-- App One End -->
+    </div>
+    <!-- App End -->
+
+
+
+</body>
+
+</html>
