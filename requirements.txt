@@ -8,7 +8,6 @@ PyDispatcher==2.0.5
 PyYAML==3.12
 Scrapy==1.4.0
 Twisted==16.4.1
-Twisted-Core==13.2.0
 Twisted-Web==13.2.0
 Unirest==1.1.7
 Werkzeug==0.12.2
