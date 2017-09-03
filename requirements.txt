@@ -30,6 +30,7 @@ dirspec==13.10
 dnspython==1.11.1
 duplicity==0.6.23
 et-xmlfile==1.0.1
+gunicorn==19.7.1
 html5lib==0.999
 httplib2==0.8
 hyperlink==17.2.1
