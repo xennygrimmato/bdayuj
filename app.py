@@ -33,11 +33,13 @@ def test():
     	content= "Sun, abhi football practice ko jaana aake bolta! "
 
     if "Akshat" in  searchString :
-	content= "A friend of Vayuj"
+	content= "Akxt"
     elif searchString == 'Ninja':
 	content= "Ninja ek soch hai, aur yeh soch humare dil mein hai"
-    
-
+    elif "Vayuj" in  searchString
+	content= "Bol"
+    elif "Akxt" in  searchString
+	content= "Akxt is best"
     return content
      
 if __name__ == "__main__":

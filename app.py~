@@ -21,7 +21,7 @@ def test():
     searchString=request.json["yourname"]
     searchString = searchString.title()
     with open("SearchData.txt", "a") as myfile:
-    	myfile.write(searchString+' ')
+    	myfile.write(searchString+ "\n")
     try:
       	raw = wiki.article(searchString)
     except:
@@ -33,9 +33,13 @@ def test():
     	content= "Sun, abhi football practice ko jaana aake bolta! "
 
     if "Akshat" in  searchString :
-	content= "A friend of Vayuj"
+	content= "Akxt"
     elif searchString == 'Ninja':
 	content= "Ninja ek soch hai, aur yeh soch humare dil mein hai"
+    elif "Vayuj" in  searchString
+	content= "Bol"
+    elif "Akxt" in  searchString
+	content= "Akxt is best"
     
 
     return content
