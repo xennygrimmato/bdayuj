@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import Flask, render_template,json, request
-from SearchMethod import SearchMethod
 from wikipedia import Wikipedia
 from wiki2plain import Wiki2Plain
 from flask import jsonify
@@ -33,13 +32,13 @@ def test():
     	content= "Sun, abhi football practice ko jaana aake bolta! "
 
     if "Akshat" in  searchString :
-	content= "Akxt"
+	content= "Sun, abhi tt khelne jaana aake bolta!"
     elif searchString == 'Ninja':
 	content= "Ninja ek soch hai, aur yeh soch humare dil mein hai"
     elif "Vayuj" in  searchString
 	content= "Bol"
     elif "Akxt" in  searchString
-	content= "Akxt is best"
+	content= "Sun, abhi tt khelne jaana aake bolta!"
     return content
      
 if __name__ == "__main__":
