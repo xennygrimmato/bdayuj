@@ -1,10 +1,6 @@
-from flask import Flask
-from flask import Flask, render_template,json, request
+from flask import Flask, render_template
 from wikipedia import Wikipedia
 from wiki2plain import Wiki2Plain
-from flask import jsonify
-from flask_cors import CORS, cross_origin
-import json
 
 app = Flask(__name__)
 # CORS(app)
