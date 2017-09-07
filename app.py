@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route("/")
 def main():
-     return render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/test',methods=['POST'])
 def test():
@@ -20,25 +20,25 @@ def test():
     searchString=request.json["yourname"]
     searchString = searchString.title()
     with open("SearchData.txt", "a") as myfile:
-    	myfile.write(searchString+ "\n")
+        myfile.write(searchString+ "\n")
     try:
-      	raw = wiki.article(searchString)
+        raw = wiki.article(searchString)
     except:
-    	raw = None
+        raw = None
     if raw:
-    	wiki2plain = Wiki2Plain(raw)
+        wiki2plain = Wiki2Plain(raw)
         content = wiki2plain.text
     else: 
-    	content= "Sun, abhi football practice ko jaana aake bolta! "
+        content= "Sun, abhi football practice ko jaana aake bolta! "
 
     if "Akshat" in  searchString :
-	content= "Sun, abhi tt khelne jaana aake bolta!"
+        content= "Sun, abhi tt khelne jaana aake bolta!"
     elif searchString == 'Ninja':
-	content= "Ninja ek soch hai, aur yeh soch humare dil mein hai"
-    elif "Vayuj" in  searchString
-	content= "Bol"
-    elif "Akxt" in  searchString
-	content= "Sun, abhi tt khelne jaana aake bolta!"
+        content= "Ninja ek soch hai, aur yeh soch humare dil mein hai"
+    elif "Vayuj" in  searchString:
+        content= "Bol"
+    elif "Akxt" in  searchString:
+        content= "Sun, abhi tt khelne jaana aake bolta!"
     return content
      
 if __name__ == "__main__":
