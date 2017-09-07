@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from wikipedia import Wikipedia
 from wiki2plain import Wiki2Plain
+from sys import argv
 
 app = Flask(__name__)
 # CORS(app)
@@ -87,4 +88,5 @@ def test():
     return content
      
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+    port = int(argv[1])
+    app.run(host='0.0.0.0', port=port)
