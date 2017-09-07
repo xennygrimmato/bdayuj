@@ -87,6 +87,6 @@ def test():
         content= "Sun, abhi tt khelne jaana aake bolta!"
     return content
      
-if __name__ == "__main__":
-    port = int(argv[1])
-    app.run(host='0.0.0.0', port=port)
+# if __name__ == "__main__":
+#     port = int(argv[1])
+#     app.run(host='0.0.0.0', port=port)
