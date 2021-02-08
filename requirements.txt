@@ -21,7 +21,7 @@ dnspython==1.11.1
 et-xmlfile==1.0.1
 gunicorn==19.7.1
 html5lib==0.999
-httplib2==0.18.0
+httplib2==0.19.0
 hyperlink==17.2.1
 incremental==17.5.0
 itsdangerous==0.24
