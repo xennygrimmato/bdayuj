@@ -1,6 +1,6 @@
 Automat==0.6.0
 Flask==0.12.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Jinja2==2.9.6
 MarkupSafe==1.0
 Pillow==2.3.0
