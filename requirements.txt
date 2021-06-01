@@ -48,7 +48,7 @@ requests==2.2.1
 selenium==3.4.1
 service-identity==17.0.0
 six==1.10.0
-urllib3==1.7.1
+urllib3==1.26.5
 w3lib==1.17.0
 wheel==0.24.0
 zope.interface==4.0.5
