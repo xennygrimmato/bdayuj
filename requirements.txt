@@ -6,7 +6,7 @@ MarkupSafe==1.0
 Pillow==2.3.0
 PyDispatcher==2.0.5
 PyYAML==3.12
-Scrapy==1.4.0
+Scrapy==2.6.1
 Twisted==16.4.1
 Unirest==1.1.7
 Werkzeug==0.12.2
